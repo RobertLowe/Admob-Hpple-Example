@@ -1,0 +1,6 @@
+[submodule "vendor/BubbleWrap"]
+	path = vendor/BubbleWrap
+	url = https://github.com/mattetti/BubbleWrap.git
+[submodule "vendor/hpple-motion"]
+	path = vendor/hpple-motion
+	url = git://github.com/siuying/hpple-motion.git

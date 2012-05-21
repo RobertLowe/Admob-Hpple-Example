@@ -1,0 +1,350 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<struct name='GADAdSize' type='{GADAdSize=&quot;size&quot;{CGSize=&quot;width&quot;f&quot;height&quot;f}&quot;flags&quot;I}'>
+<field name='size' declared_type='CGSize' type='{CGSize=&quot;width&quot;f&quot;height&quot;f}'/>
+<field name='flags' declared_type='NSUInteger' type='I'/>
+</struct>
+<constant name='kGADAdSizeBanner' declared_type='GADAdSize' const='true' type='{GADAdSize={CGSize=ff}I}'/>
+<constant name='kGADAdSizeFullBanner' declared_type='GADAdSize' const='true' type='{GADAdSize={CGSize=ff}I}'/>
+<constant name='kGADAdSizeInvalid' declared_type='GADAdSize' const='true' type='{GADAdSize={CGSize=ff}I}'/>
+<constant name='kGADAdSizeLeaderboard' declared_type='GADAdSize' const='true' type='{GADAdSize={CGSize=ff}I}'/>
+<constant name='kGADAdSizeMediumRectangle' declared_type='GADAdSize' const='true' type='{GADAdSize={CGSize=ff}I}'/>
+<constant name='kGADAdSizeSkyscraper' declared_type='GADAdSize' const='true' type='{GADAdSize={CGSize=ff}I}'/>
+<constant name='kGADAdSizeSmartBannerLandscape' declared_type='GADAdSize' const='true' type='{GADAdSize={CGSize=ff}I}'/>
+<constant name='kGADAdSizeSmartBannerPortrait' declared_type='GADAdSize' const='true' type='{GADAdSize={CGSize=ff}I}'/>
+<constant name='kGADErrorDomain' declared_type='NSString*' type='@'/>
+<string_constant name='GAD_SIMULATOR_ID' nsstring='true' value='Simulator'/>
+<string_constant name='kGADGoogleAdMobNetworkName' nsstring='true' value='GoogleAdMobAds'/>
+<enum name='kGADErrorInterstitialAlreadyUsed' value='6'/>
+<enum name='kGADErrorInvalidRequest' value='0'/>
+<enum name='kGADErrorMediationAdapterError' value='8'/>
+<enum name='kGADErrorMediationDataError' value='7'/>
+<enum name='kGADErrorMediationInvalidAdSize' value='10'/>
+<enum name='kGADErrorMediationNoFill' value='9'/>
+<enum name='kGADErrorNetworkError' value='2'/>
+<enum name='kGADErrorNoFill' value='1'/>
+<enum name='kGADErrorOSVersionTooLow' value='4'/>
+<enum name='kGADErrorServerError' value='3'/>
+<enum name='kGADErrorTimeout' value='5'/>
+<enum name='kGADGenderFemale' value='2'/>
+<enum name='kGADGenderMale' value='1'/>
+<enum name='kGADGenderUnknown' value='0'/>
+<function name='CGSizeFromGADAdSize'>
+<arg name='size' declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}'/>
+<retval declared_type='CGSize' type='{CGSize=ff}'/>
+</function>
+<function name='GADAdSizeEqualToSize'>
+<arg name='size1' declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}'/>
+<arg name='size2' declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='GADAdSizeFromCGSize'>
+<arg name='size' declared_type='CGSize' type='{CGSize=ff}'/>
+<retval declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}'/>
+</function>
+<function name='GADAdSizeFullWidthLandscapeWithHeight'>
+<arg name='height' declared_type='CGFloat' type='f'/>
+<retval declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}'/>
+</function>
+<function name='GADAdSizeFullWidthPortraitWithHeight'>
+<arg name='height' declared_type='CGFloat' type='f'/>
+<retval declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}'/>
+</function>
+<function name='IsGADAdSizeValid'>
+<arg name='size' declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}'/>
+<retval declared_type='BOOL' type='B'/>
+</function>
+<function name='NSStringFromGADAdSize'>
+<arg name='size' declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}'/>
+<retval declared_type='NSString*' type='@'/>
+</function>
+<class name='GADAdMobExtras'>
+<method selector='additionalParameters'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='setAdditionalParameters:'>
+<arg name='additionalParameters' declared_type='NSDictionary*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GADBannerView'>
+<method selector='adSize'>
+<retval declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}'/>
+</method>
+<method selector='adUnitID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='NSObject*' type='@'/>
+</method>
+<method selector='hasAutoRefreshed'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='initWithAdSize:'>
+<arg name='size' declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='initWithAdSize:origin:'>
+<arg name='size' declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}' index='0'/>
+<arg name='origin' declared_type='CGPoint' type='{CGPoint=ff}' index='1'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='loadRequest:'>
+<arg name='request' declared_type='GADRequest*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='mediatedAdView'>
+<retval declared_type='int*' type='^i'/>
+</method>
+<method selector='rootViewController'>
+<retval declared_type='int*' type='^i'/>
+</method>
+<method selector='setAdSize:'>
+<arg name='adSize' declared_type='GADAdSize' type='{GADAdSize={CGSize=ff}I}' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAdUnitID:'>
+<arg name='adUnitID' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='delegate' declared_type='NSObject*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setRootViewController:'>
+<arg name='rootViewController' declared_type='int*' type='^i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GADInterstitial'>
+<method selector='adUnitID'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='delegate'>
+<retval declared_type='NSObject*' type='@'/>
+</method>
+<method selector='hasBeenUsed'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='isReady'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='loadAndDisplayRequest:usingWindow:initialImage:'>
+<arg name='request' declared_type='GADRequest*' type='@' index='0'/>
+<arg name='window' declared_type='id' type='@' index='1'/>
+<arg name='image' declared_type='id' type='@' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='loadRequest:'>
+<arg name='request' declared_type='GADRequest*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='presentFromRootViewController:'>
+<arg name='rootViewController' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setAdUnitID:'>
+<arg name='adUnitID' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='delegate' declared_type='NSObject*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<class name='GADRequest'>
+<method selector='adNetworkExtrasFor:'>
+<arg name='clazz' declared_type='Class*' type='#' index='0'/>
+<retval declared_type='id' type='@'/>
+</method>
+<method selector='addKeyword:'>
+<arg name='keyword' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='additionalParameters'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='birthday'>
+<retval declared_type='NSDate*' type='@'/>
+</method>
+<method selector='gender'>
+<retval declared_type='GADGender' type='i'/>
+</method>
+<method selector='isTesting'>
+<retval declared_type='BOOL' type='B'/>
+</method>
+<method selector='keywords'>
+<retval declared_type='NSMutableArray*' type='@'/>
+</method>
+<method selector='mediationExtras'>
+<retval declared_type='NSDictionary*' type='@'/>
+</method>
+<method selector='registerAdNetworkExtras:'>
+<arg name='extras' declared_type='id' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='removeAdNetworkExtrasFor:'>
+<arg name='clazz' declared_type='Class*' type='#' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='request' class_method='true'>
+<retval declared_type='GADRequest*' type='@'/>
+</method>
+<method selector='sdkVersion' class_method='true'>
+<retval declared_type='NSString*' type='@'/>
+</method>
+<method selector='setAdditionalParameters:'>
+<arg name='additionalParameters' declared_type='NSDictionary*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBirthday:'>
+<arg name='birthday' declared_type='NSDate*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setBirthdayWithMonth:day:year:'>
+<arg name='m' declared_type='NSInteger' type='i' index='0'/>
+<arg name='d' declared_type='NSInteger' type='i' index='1'/>
+<arg name='y' declared_type='NSInteger' type='i' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setGender:'>
+<arg name='gender' declared_type='GADGender' type='i' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setKeywords:'>
+<arg name='keywords' declared_type='NSMutableArray*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocationWithDescription:'>
+<arg name='locationDescription' declared_type='NSString*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setLocationWithLatitude:longitude:accuracy:'>
+<arg name='latitude' declared_type='CGFloat' type='f' index='0'/>
+<arg name='longitude' declared_type='CGFloat' type='f' index='1'/>
+<arg name='accuracyInMeters' declared_type='CGFloat' type='f' index='2'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setMediationExtras:'>
+<arg name='mediationExtras' declared_type='NSDictionary*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTestDevices:'>
+<arg name='testDevices' declared_type='NSArray*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='setTesting:'>
+<arg name='testing' declared_type='BOOL' type='B' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='testDevices'>
+<retval declared_type='NSArray*' type='@'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='adView:didFailToReceiveAdWithError:'>
+<arg name='view' declared_type='GADBannerView*' type='@' index='0'/>
+<arg name='error' declared_type='GADRequestError*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='adViewDidDismissScreen:'>
+<arg name='adView' declared_type='GADBannerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='adViewDidReceiveAd:'>
+<arg name='view' declared_type='GADBannerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='adViewWillDismissScreen:'>
+<arg name='adView' declared_type='GADBannerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='adViewWillLeaveApplication:'>
+<arg name='adView' declared_type='GADBannerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='adViewWillPresentScreen:'>
+<arg name='adView' declared_type='GADBannerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitial:didFailToReceiveAdWithError:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<arg name='error' declared_type='GADRequestError*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialDidDismissScreen:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialDidReceiveAd:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialWillDismissScreen:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialWillLeaveApplication:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method selector='interstitialWillPresentScreen:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</class>
+<informal_protocol name='GADBannerViewDelegate'>
+<method type='v16@0:4@8@12' selector='adView:didFailToReceiveAdWithError:'>
+<arg name='view' declared_type='GADBannerView*' type='@' index='0'/>
+<arg name='error' declared_type='GADRequestError*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='adViewDidDismissScreen:'>
+<arg name='adView' declared_type='GADBannerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='adViewDidReceiveAd:'>
+<arg name='view' declared_type='GADBannerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='adViewWillDismissScreen:'>
+<arg name='adView' declared_type='GADBannerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='adViewWillLeaveApplication:'>
+<arg name='adView' declared_type='GADBannerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='adViewWillPresentScreen:'>
+<arg name='adView' declared_type='GADBannerView*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+<informal_protocol name='GADInterstitialDelegate'>
+<method type='v16@0:4@8@12' selector='interstitial:didFailToReceiveAdWithError:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<arg name='error' declared_type='GADRequestError*' type='@' index='1'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='interstitialDidDismissScreen:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='interstitialDidReceiveAd:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='interstitialWillDismissScreen:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='interstitialWillLeaveApplication:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+<method type='v12@0:4@8' selector='interstitialWillPresentScreen:'>
+<arg name='ad' declared_type='GADInterstitial*' type='@' index='0'/>
+<retval declared_type='void' type='v'/>
+</method>
+</informal_protocol>
+</signatures>
